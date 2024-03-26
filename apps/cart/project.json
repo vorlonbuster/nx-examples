@@ -5,6 +5,12 @@
   "projectType": "application",
   "generators": {},
   "targets": {
+    "echo": {
+      "executor": "my-plugin:echo",
+      "options": {
+        "textToEcho": "Hello World"
+      }
+    },
     "build": {
       "executor": "@nx/webpack:webpack",
       "options": {
