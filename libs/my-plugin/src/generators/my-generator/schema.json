@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/schema",
+  "$id": "MyGenerator",
+  "title": "",
+  "type": "object",
+  "properties": {
+  },
+  "required": []
+}

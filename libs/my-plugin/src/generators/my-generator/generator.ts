@@ -1,7 +1,14 @@
-import { EchoExecutorSchema } from './schema';
+import {
+
+  Tree,
+} from '@nx/devkit';
+import { MyGeneratorGeneratorSchema } from './schema';
 import * as enquirer from 'enquirer';
-export default async function runExecutor(options: EchoExecutorSchema) {
-  console.log('Executor ran for Echo', options);
+
+export async function myGeneratorGenerator(
+  tree: Tree,
+  options: MyGeneratorGeneratorSchema
+) {
 
   const r = await enquirer.prompt<{
     workspaceType: 'standalone' | 'integrated';
@@ -28,7 +35,6 @@ export default async function runExecutor(options: EchoExecutorSchema) {
 
   console.log('Result', r);
 
-  return {
-    success: true,
-  };
 }
+
+export default myGeneratorGenerator;
