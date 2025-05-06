@@ -3,7 +3,7 @@
     "warnings": {
       "versionMismatch": false
     },
-    "packageManager": "yarn",
+    "packageManager": "pnpm",
     "analytics": false
   },
   "generators": {
@@ -67,6 +67,9 @@
       "cache": true,
       "dependsOn": ["^build"],
       "inputs": ["production", "^production"]
+    },
+    "e2e-ci--**/**": {
+      "dependsOn": ["^cart:build", "^products:build"]
     }
   },
   "namedInputs": {
